@@ -1,7 +1,6 @@
+import mongoose from "mongoose";
 import express from "express";
 const router = express.Router();
-
-import mongoose from "mongoose";
 
 mongoose.set("strictQuery", true);
 
@@ -26,7 +25,7 @@ const studentSchema = new mongoose.Schema({
 });
 
 // create schema object
-const Student = mongoose.model("sudent", studentSchema);
+const Student = mongoose.model("student", studentSchema);
 
 // finding student
 const FIND_STUDENT = async (req, res) => {
