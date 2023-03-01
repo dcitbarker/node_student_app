@@ -5,7 +5,7 @@ import studentRoutes from "./requests.js";
 const DBCONNECT = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://abarker:TFYteNQieJWQMgJj@cluster0.6ucasko.mongodb.net/?retryWrites=true&w=majority",
+      "Put Mongo Link Here",
       { autoIndex: true }
     );
     console.log("db connected Succesfully");
@@ -17,7 +17,7 @@ const DBCONNECT = async () => {
 
 // implementation
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 //use express json
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,7 +29,7 @@ app.use("/api/v1", studentRoutes);
 app.listen(5000, async () => {
   try {
     await DBCONNECT();
-    console.log("server listening on Port 5000");
+    console.log("server listening on Port 3000");
   } catch (err) {
     console.log(err);
   }
